@@ -1,0 +1,228 @@
+body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: "Rubik", sans-serif;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 60px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+i {
+    font-size: 14px;
+}
+
+.images-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.images-container .images {
+    text-align: left;
+    display: inline-block;
+}
+
+.images i,
+.images p {
+    text-align: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.images h2 {
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 128, 0.4);
+    margin-block-end: 0;
+    margin-block-start: 0;
+    text-align: center;
+    color: white;
+    padding: 3px 0px 3px 0px;
+    font-weight: 400;
+    width: 100%;
+}
+
+.images-container .images {
+    margin: 5px 5px 0 5px;
+    position: relative;
+}
+
+.images-container .images img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+}
+
+#input-form {
+    margin-bottom: 60px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 25px 0 25px 0;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    top: 0;
+    border-bottom: 1px solid navy;
+}
+
+#file-upload {
+    color: black;
+}
+
+button {
+    background-color: navy;
+    color: white;
+    width: 120px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    -webkit-box-shadow: 0px 7px 10px -1px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 7px 10px -1px rgba(0, 0, 0, 0.8);
+}
+
+/* modal-containers */
+
+#modal {
+    width: 65%;
+    height: 70%;
+    background-color: #050505;
+    color: white;
+    position: fixed;
+    padding: 20px;
+    padding-top: 40px;
+    padding-left: 0;
+    padding-right: 0;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+#modal img {
+    object-fit: cover;
+    width: 95%;
+    height: 365px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 18px;
+    padding-left: 12px;
+}
+
+.modal-container {
+    display: inline-block;
+}
+
+.modal-container-first {
+    width: 70%;
+}
+
+.modal-container-last {
+    width: 28%;
+    vertical-align: top;
+}
+
+.form-modal {
+    margin-top: 17px;
+}
+
+/* modal-inputs */
+
+.comment-input,
+.comment-username,
+.comments {
+    display: block;
+}
+
+.comment-input {
+    background-color: #1b1e1f;
+    outline-color: navy;
+    border-color: navy;
+}
+
+.comment-username {
+    margin-bottom: 10px;
+    height: 22px;
+    background-color: #1b1e1f;
+    outline-color: navy;
+    border-color: navy;
+}
+
+label {
+    margin-bottom: 4px;
+}
+
+.comment-input,
+.comment-username,
+.comments {
+    width: 94%;
+    caret-color: white;
+    color: white;
+}
+
+.comment-child {
+    margin-left: 15px;
+}
+
+.comments {
+    background-color: #050505;
+    cursor: default;
+    border: none;
+}
+
+.comments:focus {
+    outline: none;
+}
+
+.comment-child .comment-input {
+    height: 80px;
+}
+
+button.comment-button {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.x {
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    top: 0;
+    margin-right: 20px;
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.more-container {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+#span {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 3px 9px 3px 9px;
+    color: white;
+    border-bottom: 2px solid navy;
+}
+
+#logo {
+    font-size: 1.2em;
+    font-weight: bold;
+    max-width: 300px;
+    position: absolute;
+    left: 0;
+    margin-left: 30px;
+}
