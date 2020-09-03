@@ -11,7 +11,7 @@ if (process.env.DATABASE_URL) {
 }
 
 exports.getImages = () => {
-    return db.query(`SELECT * FROM images ORDER BY id DESC LIMIT 10`);
+    return db.query(`SELECT * FROM images ORDER BY id DESC LIMIT 20`);
 };
 
 exports.getMoreImages = (startId, offset) =>
