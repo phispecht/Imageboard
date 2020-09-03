@@ -1,6 +1,6 @@
 const express = require("express");
-/* const app = express(); */
-const server = require("http").Server(app);
+const app = express();
+/* const server = require("http").Server(app); */
 const db = require("./db");
 const { s3Url } = require("./config.json");
 const s3 = require("./s3.js");
@@ -119,4 +119,4 @@ app.get("/moreImages/:firstId/:amountImages", (req, res) => {
         });
 });
 
-server.listen(process.env.PORT || 8080, () => console.log("server listening!"));
+app.listen(process.env.PORT || 8080, () => console.log("server listening!"));
