@@ -73,6 +73,7 @@
             axios
                 .get("/images")
                 .then(function (response) {
+                    console.log("response:", response);
                     self.images = response.data;
                 })
                 .catch(function (error) {
@@ -103,6 +104,7 @@
                 axios
                     .post("/upload", formData)
                     .then(function (resp) {
+                        console.log("resp", resp);
                         self.images.unshift(resp.data[0]);
                     })
                     .catch(function (error) {
