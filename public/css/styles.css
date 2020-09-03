@@ -63,6 +63,7 @@ i {
     width: 220px;
     height: 220px;
     object-fit: cover;
+    cursor: pointer;
 }
 
 #input-form {

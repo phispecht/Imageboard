@@ -44,9 +44,7 @@
                     accept="image/*"
                 />
 
-                <button @click="handleClick">
-                    Upload
-                </button>
+                <button @click="handleClick">Upload</button>
             </form>
 
             <div class="images-container">
@@ -58,16 +56,14 @@
                     <h2>{{image.title}}</h2>
 
                     <div id="modal" v-if="show == image.id">
-                        <button v-on:click="handleClose" class="x">
-                            X
-                        </button>
+                        <button v-on:click="handleClose" class="x">X</button>
                         <modal-component v-bind:id="image.id"></modal-component>
                     </div>
                 </div>
             </div>
-            <div class="more-container">
+            <!--    <div class="more-container">
                 <button @click="loadMore" class="more">Load Images</button>
-            </div>
+            </div> -->
         </div>
 
         <script id="template" type="text/x-template">

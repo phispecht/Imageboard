@@ -41,6 +41,8 @@ app.post("/upload", uploader.single("file"), s3.upload, (req, res) => {
     const descr = req.body.description;
     const username = req.body.username;
 
+    console.log("imageurl:", imageUrl);
+
     if (req.file) {
         db.insertImage(imageUrl, username, title, descr)
             .then(function (rows) {
