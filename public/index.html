@@ -9,13 +9,16 @@
         />
     </head>
     <body>
-        <h1>Img<span id="span">i</span>nation</h1>
+        <span id="logo-home-container"
+            ><h1>Img<span id="span">i</span>nation</h1></span
+        >
 
-        <!--   this container is for our Vue instance. It will have access to our Vue code. -->
         <div id="main">
-            <form id="input-form">
+            <form class="input-form">
+                <div id="show-input">Add Image</div>
                 <div id="logo">Img<span id="span">i</span>nation</div>
                 <input
+                    class="input-form-element"
                     v-model="title"
                     type="text"
                     name="title"
@@ -23,6 +26,7 @@
                 />
 
                 <input
+                    class="input-form-element"
                     v-model="description"
                     type="text"
                     name="description"
@@ -30,6 +34,7 @@
                 />
 
                 <input
+                    class="input-form-element"
                     v-model="username"
                     type="text"
                     name="username"
@@ -37,6 +42,7 @@
                 />
 
                 <input
+                    class="input-form-element"
                     id="file-upload"
                     @change="handleChange"
                     type="file"
@@ -44,7 +50,9 @@
                     accept="image/*"
                 />
 
-                <button @click="handleClick">Upload</button>
+                <button class="input-form-element" @click="handleClick">
+                    Upload Image
+                </button>
             </form>
 
             <div class="images-container">
@@ -64,15 +72,26 @@
             <!--    <div class="more-container">
                 <button @click="loadMore" class="more">Load Images</button>
             </div> -->
+            <div class="datenschutz-links">
+                <span><a href="/impressum.html">Impressum/Imprint</a></span>
+                <span
+                    ><a href="/datenschutz.html"
+                        >Datenschutz/Privay Policy</a
+                    ></span
+                >
+                <span><a href="/disclaimer.html">Disclaimer</a></span>
+            </div>
         </div>
 
         <script id="template" type="text/x-template">
             <div>
                 <div class="modal-container modal-container-first">
                     <img :src="oneImage.url">
-                    <i>Uploaded by {{oneImage.username}} on {{oneImage.created_at}} </i>
+                    <div class="image-infos">
+                        <i>Uploaded by {{oneImage.username}} on {{oneImage.created_at}} </i>
+                    </div>
                     <h2>{{oneImage.title}}</h2>
-                    <p>{{oneImage.description}}</p>
+                    <p class="modal-description">{{oneImage.description}}</p>
                 </div>
                 <div class="modal-container modal-container-last">
                     <form class="form-modal">
@@ -97,9 +116,9 @@
                 </div>
             </div>
         </script>
-
         <script src="/js/vue.js"></script>
         <script src="/js/axios.min.js"></script>
         <script src="/js/script.js"></script>
+        <script src="js/javascript.js"></script>
     </body>
 </html>

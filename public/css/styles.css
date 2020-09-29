@@ -27,6 +27,7 @@ i {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
+    margin-bottom: 100px;
 }
 
 .images-container .images {
@@ -34,11 +35,17 @@ i {
     display: inline-block;
 }
 
-.images i,
+.image-infos {
+    text-align: left;
+    padding-left: 30px;
+}
+
 .images p {
     text-align: left;
-    padding-left: 15px;
-    padding-right: 15px;
+}
+
+.modal-description {
+    padding-left: 30px;
 }
 
 .images h2 {
@@ -66,7 +73,7 @@ i {
     cursor: pointer;
 }
 
-#input-form {
+.input-form {
     margin-bottom: 60px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.6);
@@ -84,8 +91,9 @@ i {
 
 button {
     background-color: navy;
+    border-radius: 5px;
     color: white;
-    width: 120px;
+    width: 165px;
     height: 30px;
     cursor: pointer;
     border: none;
@@ -107,8 +115,9 @@ button {
     padding-right: 0;
     top: 55%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -55%);
     z-index: 9999;
+    overflow-y: scroll;
 }
 
 #modal img {
@@ -226,4 +235,255 @@ button.comment-button {
     position: absolute;
     left: 0;
     margin-left: 30px;
+}
+
+.table {
+    margin-bottom: 20px;
+}
+
+.table td {
+    background: rgb(239 239 239);
+    font-size: 20px;
+    width: 50%;
+    padding: 10px 5px;
+    overflow: hidden;
+    word-break: normal;
+}
+
+.impressum h1,
+.datenschutz h1,
+.disclaimer h1 {
+    margin-top: 30px;
+    color: navy;
+    text-align: left;
+}
+
+.impressum h2,
+.datenschutz h2,
+.disclaimer h2 {
+    color: rgb(32, 32, 32);
+}
+
+.impressum h3,
+.impressum h4,
+.datenschutz h3,
+.datenschutz h4,
+.disclaimer h3,
+.disclaimer h4 {
+    color: rgb(77, 77, 77);
+}
+
+.impressum,
+.datenschutz,
+.disclaimer {
+    max-width: 1170px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 30px;
+    margin-bottom: 100px;
+}
+
+.datenschutz-links {
+    position: fixed;
+    text-align: center;
+    font-size: 16px;
+    bottom: 0;
+    width: 100%;
+    background: navy;
+    padding: 20px 0px 20px 0px;
+}
+
+.datenschutz-links span a {
+    color: white;
+    text-decoration: none;
+}
+
+.datenschutz-links span:not(:first-of-type) {
+    margin-left: 20px;
+}
+
+.text-bold {
+    color: navy;
+}
+
+.logo-link a {
+    color: black;
+    text-decoration: none;
+}
+
+.logo-datenschutz {
+    margin-bottom: 80px;
+}
+
+.logo-datenschutz h1 {
+    text-align: left;
+}
+
+#show-input {
+    position: absolute;
+    border-radius: 5px;
+    left: 50%;
+    transform: translate(-50%, 10%);
+    z-index: 9999;
+    cursor: pointer;
+    background: navy;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+.changeColor {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+@media screen and (max-width: 1250px) {
+    #logo {
+        left: 50%;
+        transform: translate(-50%, -220%);
+        margin-left: 0px;
+    }
+
+    .input-form {
+        padding: 75px 0 25px 0;
+    }
+
+    #logo-home-container h1 {
+        margin-top: 180px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .modal-container-first {
+        width: 100%;
+    }
+
+    .modal-container-last {
+        width: 100%;
+        padding-left: 12px;
+    }
+
+    .image-infos {
+        padding-left: 30px;
+    }
+
+    #modal img {
+        height: 200px;
+    }
+
+    .images p:not(:first-of-type) {
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 927px) {
+    .input-form button {
+        margin-top: 20px;
+    }
+
+    .input-form input {
+        margin-top: 20px;
+    }
+
+    #show-input {
+        display: block;
+    }
+
+    .input-form input,
+    .input-form button {
+        display: none;
+    }
+
+    .input-form .show {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .input-form input.show:first-of-type {
+        margin-top: 80px;
+    }
+
+    #file-upload {
+        width: 165px;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .input-form button {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .images-container {
+        margin-top: 240px;
+    }
+
+    #logo-home-container h1 {
+        display: none;
+    }
+
+    .modal-container {
+        width: 96%;
+    }
+}
+
+@media screen and (max-width: 758px) {
+    #file-upload {
+        width: 165px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .impressum h1,
+    .datenschutz h1,
+    .disclaimer h1 {
+        font-size: 24px;
+    }
+
+    .table td {
+        display: block;
+        width: 100%;
+        word-break: break-word;
+    }
+
+    .modal-container {
+        width: 94%;
+    }
+
+    #modal {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .datenschutz-links span {
+        display: block;
+    }
+
+    .comment-child {
+        margin-left: 0;
+    }
+
+    #modal img {
+        margin-left: 0;
+        padding-left: 10px;
+        width: 100%;
+    }
+
+    .modal-container {
+        width: 90%;
+    }
+
+    .modal-description,
+    .images infos {
+        padding-left: 12px;
+    }
+
+    .datenschutz-links span:not(:first-of-type) {
+        margin-left: 0px;
+    }
 }

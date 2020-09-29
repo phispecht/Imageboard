@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-/* const server = require("http").Server(app); */
 const db = require("./db");
 const { s3Url } = require("./config.json");
 const s3 = require("./s3.js");
@@ -41,8 +40,6 @@ app.post("/upload", uploader.single("file"), s3.upload, (req, res) => {
     const descr = req.body.description;
     const username = req.body.username;
 
-    console.log("imageurl:", imageUrl);
-
     if (req.file) {
         db.insertImage(imageUrl, username, title, descr)
             .then(function (rows) {
@@ -72,6 +69,36 @@ app.get("/images", (req, res) => {
 });
 
 app.get("/oneImage/:id", (req, res) => {
+    db.getOneImage(req.params.id)
+        .then(function (oneImage) {
+            res.json(oneImage.rows[0]);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+});
+
+app.get("/impresusm", (req, res) => {
+    db.getOneImage(req.params.id)
+        .then(function (oneImage) {
+            res.json(oneImage.rows[0]);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+});
+
+app.get("/datenschutz", (req, res) => {
+    db.getOneImage(req.params.id)
+        .then(function (oneImage) {
+            res.json(oneImage.rows[0]);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+});
+
+app.get("/disclaimer", (req, res) => {
     db.getOneImage(req.params.id)
         .then(function (oneImage) {
             res.json(oneImage.rows[0]);
