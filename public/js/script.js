@@ -1,11 +1,3 @@
-/* //////////// new ////////////
-
-import Vue from "vue";
-import App from "./App.vue";
-import router from "./router";
-
-//////////// new //////////// */
-
 (function () {
     Vue.component("modal-component", {
         props: ["id"],
@@ -62,17 +54,6 @@ import router from "./router";
             },
         },
     });
-
-    /*     //////////// new ////////////
-
-    Vue.config.productionTip = false;
-
-    new Vue({
-        router,
-        render: (h) => h(App),
-    }).$mount("#app");
-
-    //////// new //////////// */
 
     new Vue({
         el: "#main",

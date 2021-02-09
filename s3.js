@@ -20,7 +20,6 @@ exports.upload = (req, res, next) => {
     }
 
     count += 1;
-    console.log(count);
     if (count <= 40) {
         const { filename, mimetype, size, path } = req.file;
 
