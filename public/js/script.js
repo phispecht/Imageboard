@@ -73,7 +73,6 @@
             axios
                 .get("/images")
                 .then(function (response) {
-                    console.log("response:", response);
                     self.images = response.data;
                 })
                 .catch(function (error) {
