@@ -19,31 +19,28 @@ exports.upload = (req, res, next) => {
         return res.sendStatus(500);
     }
 
-    count += 1;
-    if (count <= 40) {
-        const { filename, mimetype, size, path } = req.file;
+    const { filename, mimetype, size, path } = req.file;
 
-        const promise = s3
-            .putObject({
-                Bucket: "imageboard-specht",
-                ACL: "public-read",
-                Key: filename,
-                Body: fs.createReadStream(path),
-                ContentType: mimetype,
-                ContentLength: size,
-            })
-            .promise();
+    const promise = s3
+        .putObject({
+            Bucket: "imageboard-specht",
+            ACL: "public-read",
+            Key: filename,
+            Body: fs.createReadStream(path),
+            ContentType: mimetype,
+            ContentLength: size,
+        })
+        .promise();
 
-        promise
-            .then(() => {
-                // it worked!!!
-                next();
-                fs.unlink(path, () => {});
-            })
-            .catch((err) => {
-                // uh oh
-                res.sendStatus(500);
-                console.log(err);
-            });
-    }
+    promise
+        .then(() => {
+            // it worked!!!
+            next();
+            fs.unlink(path, () => {});
+        })
+        .catch((err) => {
+            // uh oh
+            res.sendStatus(500);
+            console.log(err);
+        });
 };
